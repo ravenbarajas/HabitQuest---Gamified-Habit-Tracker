@@ -4,6 +4,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HabitProvider } from "@/context/HabitContext";
+import Landing from "@/pages/Landing";
+import About from "@/pages/About";
 import Dashboard from "@/pages/Dashboard";
 import Habits from "@/pages/Habits";
 import Progress from "@/pages/Progress";
@@ -14,7 +16,9 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Dashboard} />
+      <Route path="/" component={Landing} />
+      <Route path="/about" component={About} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/habits" component={Habits} />
       <Route path="/progress" component={Progress} />
       <Route path="/achievements" component={Achievements} />
