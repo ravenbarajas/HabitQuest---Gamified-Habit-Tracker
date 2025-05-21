@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  
+  /* Primary color (purple in design) */
+  --primary: 248 53% 63%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary color (teal in design) */
+  --secondary: 171 100% 36%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent color (yellow in design) */
+  --accent: 41 97% 71%;
+  --accent-foreground: 20 14.3% 4.1%;
+  
+  /* Card */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  /* Muted */
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  /* Border */
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  
+  /* Ring */
+  --ring: 248 53% 63%;
+  
+  /* Destructive */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Chart colors */
+  --chart-1: 248 53% 63%;
+  --chart-2: 171 100% 36%;
+  --chart-3: 41 97% 71%;
+  --chart-4: 217 91% 60%;
+  --chart-5: 316 73% 52%;
+  
+  /* Sidebar */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 248 53% 63%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 41 97% 71%;
+  --sidebar-accent-foreground: 20 14.3% 4.1%;
+  --sidebar-border: 214.3 31.8% 91.4%;
+  --sidebar-ring: 248 53% 63%;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Primary color (purple in design) */
+  --primary: 248 53% 63%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary color (teal in design) */
+  --secondary: 171 100% 36%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent color (yellow in design) */
+  --accent: 41 97% 71%;
+  --accent-foreground: 20 14.3% 4.1%;
+  
+  /* Card */
+  --card: 222 47% 11%;
+  --card-foreground: 0 0% 98%;
+  
+  /* Muted */
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  
+  /* Popover */
+  --popover: 222 47% 11%;
+  --popover-foreground: 0 0% 98%;
+  
+  /* Border */
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  
+  /* Ring */
+  --ring: 248 53% 63%;
+  
+  /* Destructive */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Chart colors */
+  --chart-1: 248 53% 63%;
+  --chart-2: 171 100% 36%;
+  --chart-3: 41 97% 71%;
+  --chart-4: 217 91% 60%;
+  --chart-5: 316 73% 52%;
+  
+  /* Sidebar */
+  --sidebar-background: 222 47% 11%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 248 53% 63%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 41 97% 71%;
+  --sidebar-accent-foreground: 20 14.3% 4.1%;
+  --sidebar-border: 217.2 32.6% 17.5%;
+  --sidebar-ring: 248 53% 63%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-neutral-50 text-neutral-800 font-sans antialiased;
+  }
+  
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .completion-ring {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+  }
+  
+  .streak-flame {
+    filter: drop-shadow(0 0 8px rgba(255, 174, 26, 0.6));
+  }
+  
+  .nav-indicator {
+    left: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Achievement glow */
+  .shadow-achievement {
+    box-shadow: 0 0 15px rgba(253, 203, 110, 0.6);
+  }
+}
